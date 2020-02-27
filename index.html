@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alpine.js labs</title>
+    <meta charset="UTF-8" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <h1>Alpine.js</h1>
+    <section>
+      <h2>Toggle text</h2>
+      <div x-data="{ isOpen: false }">
+        <button x-on:click="isOpen = !isOpen">Toggle text</button>
+        <p x-show="isOpen">Toggle this text please..</p>
+      </div>
+    </section>
+  </body>
+</html>
