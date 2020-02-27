@@ -3,6 +3,7 @@
   <head>
     <title>Alpine.js labs</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js"
       defer
@@ -14,8 +15,32 @@
     <section>
       <h2>Toggle text</h2>
       <div x-data="{ isOpen: false }">
-        <button x-on:click="isOpen = !isOpen">Toggle text</button>
+        <button @click="isOpen = !isOpen">
+          Toggle text
+        </button>
         <p x-show="isOpen">Toggle this text please..</p>
+      </div>
+    </section>
+    <section>
+      <h2>Dropdown</h2>
+      <div x-data="{dropIsOpen: false}">
+        <button
+          class="dropdown-btn"
+          @click="dropIsOpen = !dropIsOpen"
+          @keydown.escape="dropIsOpen = false"
+        >
+          Drop it
+          <span class="arrow"></span>
+        </button>
+        <ul
+          x-show="dropIsOpen"
+          @click.away="dropIsOpen = false"
+          class="dropdown"
+        >
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ul>
       </div>
     </section>
   </body>
