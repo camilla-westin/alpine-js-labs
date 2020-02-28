@@ -88,5 +88,60 @@
         </div>
       </div>
     </section>
+    <section>
+      <h2>Tabs</h2>
+      <div class="tabs" x-data="{ tab: 'tab1' }">
+        <div role="tablist" aria-label="Entertainment">
+          <button
+            role="tab"
+            :class="{'tab-active' : tab === 'tab1'}"
+            @click.prevent="tab = 'tab1'"
+          >
+            Nils Frahm
+          </button>
+          <button
+            role="tab"
+            tabindex="-1"
+            :class="{'tab-active' : tab === 'tab2'}"
+            @click.prevent="tab = 'tab2'"
+          >
+            Agnes Obel
+          </button>
+          <button
+            role="tab"
+            tabindex="-1"
+            :class="{'tab-active' : tab === 'tab3'}"
+            @click.prevent="tab = 'tab3'"
+          >
+            Joke
+          </button>
+        </div>
+        <div tabindex="0" role="tabpanel" class="tab" x-show="tab === 'tab1'">
+          <p>
+            Nils Frahm is a German musician, composer and record producer based
+            in Berlin. He is known for combining classical and electronic music
+            and for an unconventional approach to the piano in which he mixes a
+            grand piano, upright piano, Roland Juno-60, Rhodes piano, drum
+            machine, and Moog Taurus.
+          </p>
+        </div>
+        <div tabindex="0" role="tabpanel" class="tab" x-show="tab === 'tab2'">
+          <p>
+            Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first
+            album, Philharmonics, was released by PIAS Recordings on 4 October
+            2010 in Europe. Philharmonics was certified gold in June 2011 by the
+            Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
+          </p>
+        </div>
+        <div tabindex="0" role="tabpanel" class="tab" x-show="tab === 'tab3'">
+          <p>
+            Fear of complicated buildings:
+          </p>
+          <p>
+            A complex complex complex.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

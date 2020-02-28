@@ -173,3 +173,18 @@ ul.dropdown {
   border: 2px solid #2d3340;
 }
 
+.tabs button {
+  border-radius: 3px 3px 0 0;
+}
+
+.tabs button.tab-active {
+  background: #f8f8f8;
+  color: #2d3340;
+  outline: none;
+}
+
+.tabs .tab {
+  background: #f8f8f8;
+  padding: 20px;
+  width: 450px;
+}
