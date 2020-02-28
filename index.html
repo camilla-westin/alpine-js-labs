@@ -45,5 +45,27 @@
         </ul>
       </div>
     </section>
+    <section>
+      <h2>Modal</h2>
+      <div x-data="{modalIsOpen: false}">
+        <button
+          @click="modalIsOpen = true"
+          @keydown.escape="modalIsOpen = false"
+        >
+          Open modal
+        </button>
+        <div
+          class="modal"
+          x-show="modalIsOpen"
+          @click.away="modalIsOpen = false"
+        >
+          <h3>This is the modal</h3>
+          <p>This is some text inside the modal.</p>
+          <button @click="modalIsOpen = false">
+            Close
+          </button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
