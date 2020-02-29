@@ -144,5 +144,53 @@
         </div>
       </div>
     </section>
+    <section>
+        <h2>Image selection</h2>
+        <div class="images" x-data="{ image: 'image1' }">
+          <div class="big-image">
+            <img
+              src="https://images.unsplash.com/photo-1504532105049-367430c38ba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="Art"
+              x-show="image === 'image1'"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1579894059380-1866b68bce6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="Cassette"
+              x-show="image === 'image2'"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1565656898731-61d5df85f9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="Televisions"
+              x-show="image === 'image3'"
+            />
+          </div>
+          <div class="thumbnails">
+            <a
+              href="#"
+              @click.prevent="image = 'image1'"
+              :class="{ 'image-active' : image === 'image1'}"
+              ><img
+                src="https://images.unsplash.com/photo-1504532105049-367430c38ba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                alt="Art"
+            /></a>
+            <a
+              href="#"
+              @click.prevent="image = 'image2'"
+              :class="{ 'image-active' : image === 'image2'}"
+              ><img
+                src="https://images.unsplash.com/photo-1579894059380-1866b68bce6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                alt="Cassette"
+            /></a>
+            <a
+              href="#"
+              @click.prevent="image = 'image3'"
+              :class="{ 'image-active' : image === 'image3'}"
+              ><img
+                src="https://images.unsplash.com/photo-1565656898731-61d5df85f9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                alt="Televisions"
+            /></a>
+          </div>
+        </div>
+      </section>
   </body>
 </html>

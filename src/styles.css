@@ -195,3 +195,27 @@ ul.dropdown {
   background: #f8f8f8;
   padding: 20px;
 }
+
+.big-image img {
+  width: 100%;
+}
+
+.thumbnails {
+  display: flex;
+  margin-left: -3px;
+  margin-right: -3px;
+}
+
+.thumbnails a {
+  padding: 3px;
+  transition: opacity 0.2s ease-in;
+}
+
+.thumbnails a.image-active,
+.thumbnails a:hover {
+  opacity: 0.6;
+}
+
+.thumbnails img {
+  width: 100%;
+}
