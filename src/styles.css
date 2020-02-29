@@ -5,11 +5,18 @@ body {
   background: lightblue;
   color: #2d3340;
 }
+
 header {
-  background: #f8f8f8;
+  background: #2d3340;
   padding: 10px 50px;
   position: relative;
   z-index: 1;
+  display: flex;
+}
+
+header img {
+  width: 70px;
+  padding-right: 20px;
 }
 
 .navigation-btn {
@@ -24,7 +31,7 @@ header {
 .navigation-btn span {
   width: 100%;
   height: 4px;
-  background: #2d3340;
+  background: #f8f8f8f8;
   position: absolute;
   right: 0;
 }
@@ -96,7 +103,8 @@ section {
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 30px;
+  color: #d8dee9;
 }
 
 h2 {
@@ -186,5 +194,4 @@ ul.dropdown {
 .tabs .tab {
   background: #f8f8f8;
   padding: 20px;
-  width: 450px;
 }
